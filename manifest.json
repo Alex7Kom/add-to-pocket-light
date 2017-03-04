@@ -1,0 +1,31 @@
+{
+  "name": "Add to Pocket - Light (Unofficial)",
+  "description" : "Add to Pocket with one click from Chrome toolbar",
+  "version": "0.1",
+  "icons": {
+    "16": "16.png",
+    "128": "128.png"
+  },
+  "permissions": [
+    "background",
+    "storage"
+  ],
+  "browser_action": {},
+  "background": {
+    "scripts": [
+      "bg.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "manifest_version": 2
+}
