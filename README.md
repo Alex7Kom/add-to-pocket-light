@@ -1,9 +1,9 @@
-# Add to Pocket - Light (Unofficial)
+# Pockeletti
 
 Add to Pocket with one click from Chrome toolbar.
 
+Uses '+Pocket' bookmarklet internally.
+
 ## LICENSE
 
-Code: MIT
-
-Icons: [Pocket Icon in Flat Style](https://icons8.com/web-app/21056/pocket)
+MIT
