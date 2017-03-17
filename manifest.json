@@ -1,7 +1,7 @@
 {
   "name": "Pockeletti",
   "description" : "Add to Pocket with one click from Chrome toolbar",
-  "version": "0.2",
+  "version": "0.3",
   "icons": {
     "16": "logo_16.png",
     "128": "logo_128.png"
