@@ -21,10 +21,7 @@ function addToPocket () {
 }
 
 function runBookmarklet () {
-  var script = document.createElement('script');
-  script.appendChild(document.createTextNode('(' + bookmarklet + ')();'));
-  (document.body || document.head || document.documentElement)
-    .appendChild(script);
+  eval(bookmarklet);
 }
 
 function getBookmarklet (callback) {
