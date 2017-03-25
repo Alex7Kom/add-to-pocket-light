@@ -1,6 +1,7 @@
 var bookmarklet;
 var bookmarkletPage = 'https://getpocket.com/add';
 var loginPage = 'https://getpocket.com/login?url=/add';
+var queuePage = 'https://getpocket.com/a/queue/';
 
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
   if (sender.tab) {
@@ -42,6 +43,18 @@ function obtainBookmarklet () {
     action: 'obtainingBookmarklet',
     from: document.location.href
   }, function () {
+    document.location.href = bookmarkletPage;
+  });
+}
+
+if (document.location.href === queuePage) {
+  chrome.runtime.sendMessage({
+    action: 'isObtainingBookmarklet'
+  }, function (response) {
+    if (!response.result) {
+      return;
+    }
+
     document.location.href = bookmarkletPage;
   });
 }
